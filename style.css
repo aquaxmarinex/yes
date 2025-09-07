@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: rgb(248, 179, 179);
+}
+
+.gif {
+   display: flex;
+   justify-content: center;
+align-items: center;
+flex-direction: column;
+height: 100vh;
+    
+}
+
+img {
+    background-color: rgb(240, 194, 150);
+    width: 256px;
+margin: 22px;
+}
+
+button{ 
+padding: 5px 19px;
+margin: 22px;
+border: none;
+background-color: antiquewhite;
+font-weight: 500;
+}

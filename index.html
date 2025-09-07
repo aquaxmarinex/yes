@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>propose</title>
+</head>
+
+<body onclick="song()">
+    <audio id="n" src='merry.mp3' autoplay loop>
+
+    </audio>
+    <div class="main">
+        <div class="gif">
+            <img id="gif" src='https://media.tenor.com/mbcNPm5DPloAAAAj/cute-cat.gif' alt="cute">
+            <h3 id="l1">You make my world brighter… so tell me</h3>
+            <h3 id="l2">would you be mine?</h3>
+            <div class="mm"><button onclick="yes" id="yes">yes</button>
+                <button onclick='no()' id="no">no</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        let noclick = 0
+                
+        function no() {
+            noclick++;
+            if (noclick==1){
+                document.getElementById('l1').innerText = 'Awhhh Think again! '
+            document.getElementById('l2').innerText = 'plsss!!!!'
+
+            document.getElementById('gif').src = 'https://media.tenor.com/FNX3Xvr6yGwAAAAj/snek-bubu.gif'}
+
+            if (noclick == 2){
+                document.getElementById('no').innerText = 'yes';
+                document.getElementById('l1').innerText = 'plsssssssssssss!!! sob'
+                document.getElementById('l2').innerText = ''
+            
+                document.getElementById('no').onclick = () => {
+                document.getElementById('yes').remove();
+                document.getElementById('no').remove();
+
+                document.getElementById('l1').innerText = 'LOVE YOU TOO!!! '
+                document.getElementById('l2').innerText = 'SMOOCH SMOOCH SMOOCH!!!'
+                document.getElementById('gif').src = 'https://media1.tenor.com/m/_8Do0q7xmNkAAAAd/jayfer-kissing.gif'
+
+
+            }
+        }
+    }
+        document.getElementById('yes').addEventListener('click',
+            function () {
+                document.getElementById('yes').remove();
+                document.getElementById('no').remove();
+
+                document.getElementById('l1').innerText = 'LOVE YOU TOO!!! '
+                document.getElementById('l2').innerText = 'SMOOCH SMOOCH SMOOCH!!!'
+                
+document.getElementById('gif').src = 'https://media1.tenor.com/m/kf_z5AheabMAAAAd/megan-fox-cute.gif'
+
+
+
+            });
+
+function song(){
+    const audio = document.getElementById('n')
+    audio.play().catch(e => console.log('autoplay blocked'));
+document.body.onclick = null;
+}
+    </script>
+</body>
+
+</html>
